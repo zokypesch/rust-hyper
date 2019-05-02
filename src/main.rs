@@ -88,7 +88,7 @@ fn response_examples(req: Request<Body>, client: &Client<HttpConnector>) -> Resp
            client_request_response(client)
         },
         (&Method::GET, "/_health") => {
-           client_request_response(client)
+           api_get_response()
         },
         (&Method::POST, "/json_api") => {
             api_post_response(req)

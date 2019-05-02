@@ -13,7 +13,7 @@ COPY ./app/service.yaml /app/service.yaml
 
 EXPOSE 80
 
-RUN cargo clean
-RUN RUSTFLAGS="-C target-cpu=native" cargo build --release
-
+# RUN cargo clean
+# RUN RUSTFLAGS="-C target-cpu=native" cargo build --release
+RUN cargo build --release
 CMD ["cargo", "run", "--release"]
