@@ -110,7 +110,7 @@ fn response_examples(req: Request<Body>, client: &Client<HttpConnector>) -> Resp
 fn main() {
     pretty_env_logger::init();
 
-    let addr = "127.0.0.1:80".parse().unwrap();
+    let addr = "0.0.0.0:80".parse().unwrap();
 
     hyper::rt::run(future::lazy(move || {
         // Share a `Client` with all `Service`s
