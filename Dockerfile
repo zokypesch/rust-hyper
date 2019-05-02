@@ -7,6 +7,10 @@ COPY ./app/src /app/src
 COPY ./app/Cargo.toml /app/Cargo.toml
 COPY ./app/service.yaml /app/service.yaml
 
+# COPY ./src /app/src
+# COPY ./Cargo.toml /app/Cargo.toml
+# COPY ./service.yaml /app/service.yaml
+
 EXPOSE 80
 
 RUN cargo clean
